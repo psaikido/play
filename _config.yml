@@ -1,0 +1,21 @@
+url: "https://play.hugle.co.uk"
+email: hughie@carrollonline.co.uk
+baseurl: ""
+title: play.hugle
+description: testing
+favicon: assets/images/site/favicon.ico
+permalink: /:categories/:year/:month/:day/:title:output_ext
+github_username: psaikido
+
+markdown: kramdown
+kramdown:
+  parse_block_html: true
+  auto_ids: true
+
+plugins:
+    - jekyll-sitemap
+    - github-pages
+
+sass:
+    sass_dir: _sass
+    style: compressed
