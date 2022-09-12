@@ -3,7 +3,7 @@ email: hughie@carrollonline.co.uk
 baseurl: ""
 title: play.hugle
 description: testing
-favicon: assets/images/site/favicon.ico
+favicon: assets/images/favicon.ico
 permalink: /:categories/:year/:month/:day/:title:output_ext
 github_username: psaikido
 

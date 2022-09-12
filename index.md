@@ -2,4 +2,4 @@
 layout: default
 ---
 
-the base
+the main content is the stuff that goes here

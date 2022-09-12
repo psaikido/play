@@ -1,0 +1,42 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    margin-inline: auto;
+    padding: 8px;
+    overflow-x: hidden;
+    background: $bkg;
+    color: $hilight;
+}
+
+.grid-wrap {
+    display: grid;
+    grid-gap: 15px;
+    justify-content: center;
+    grid-template-columns: 10px 1fr 10px;
+    grid-template-areas: 
+        '. header .'
+        '. navigation .'
+        '. main .'
+        '. footer .';
+
+    .header {
+        grid-area: header;
+    }
+
+    nav {
+        grid-area: navigation;
+    }
+
+    .main {
+        grid-area: main;
+    }
+
+    .footer {
+        grid-area: footer;
+    }
+}
+
