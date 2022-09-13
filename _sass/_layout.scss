@@ -1,42 +1,138 @@
-
 * {
     box-sizing: border-box;
 }
 
 body {
     width: 100vw;
-    margin-inline: auto;
-    padding: 8px;
     overflow-x: hidden;
-    background: $bkg;
+    background: $bkg-primary;
     color: $hilight;
+    margin: 10px 0 0 0; 
+    padding: 0;
 }
 
 .grid-wrap {
     display: grid;
     grid-gap: 15px;
-    justify-content: center;
     grid-template-columns: 10px 1fr 10px;
     grid-template-areas: 
         '. header .'
-        '. navigation .'
         '. main .'
         '. footer .';
 
+    @include screen-width('medium') {
+        grid-template-columns: 10px 2fr 1fr 10px;
+        grid-template-areas: 
+            '. header header .'
+            '. main navigation .'
+            '. footer footer .';
+    }
+
+    .header,
+    nav,
+    .main,
+    .footer {
+        border-radius: 10px;
+    }
+
     .header {
         grid-area: header;
+        background: $bkg-secondary;
+        padding: 2rem;
+        text-align: center;
+    }
+
+    .main-nav {
+        grid-area: navigation;
+        background: $bkg-secondary;
+    }
+
+    @include screen-width('medium') {
+        grid-template-columns: 10px 2fr 1fr 10px;
+        grid-template-areas: 
+            '. header header .'
+            '. main navigation .'
+            '. footer footer .';
+    }
+
+    .header,
+    .main-nav,
+    .main,
+    .footer {
+        border-radius: 10px;
+    }
+
+    .header {
+        grid-area: header;
+        background: $bkg-secondary;
+        padding: 2rem;
+        text-align: center;
+    }
+
+    #hamburger-chk {
+        display: none;
+    }
+
+    #hamburger-chk:checked ~ nav {
+        left: 0;
+    }
+
+    #hamburger-label, 
+    #hamburger-label::before,
+    #hamburger-label::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background: $text-light;
+    }
+
+    #hamburger-label::before {
+        top: -6px;
+    }
+
+    #hamburger-label::after {
+        top: 6px;
+    }
+
+    #main-nav {
+        position: absolute;
+        cursor: pointer;
+        top: 3.3rem;
+        right: 25px;
+        width: 2em;
+        height: 2em;
+        background: pink;
     }
 
     nav {
-        grid-area: navigation;
+        position: absolute;
+        top: 40px;
+        right: 0;
+        bottom: 0;
+        left: 10000px;
+        background: green;
+    }
+
+    @include screen-width('medium') {
+        .main-nav {
+            grid-area: navigation;
+        }
     }
 
     .main {
         grid-area: main;
+        background: $bkg-secondary;
+        color: $text-light;
+        padding: 2rem;
     }
 
     .footer {
         grid-area: footer;
+        background: $bkg-secondary;
+        padding: 2rem;
+        text-align: center;
     }
 }
 

@@ -1,6 +1,15 @@
-$dark-grey: #343a40;
-$dark-grey-shift: #444a50;
-$light-grey: #dadada;
+/*
+$clr-one: #222831;
+$clr-two: #2d4059;
+$clr-three: #ff5722;
+$clr-four: #eeeeee;
+*/
+
+$clr-one: #000000;
+$clr-two: #854836;
+$clr-three: #f5b553;
+$clr-four: #f7f7f7;
+
 $blue: #3e72cb;
 $pink: #d33682;
 $black: #333333;
@@ -8,15 +17,16 @@ $white: #ffffff;
 $green: #44c92a;
 $yellow: #ffe244;
 
-$bkg: $dark-grey;
-$hilight: #c98f2a;
+$bkg-primary: $clr-one;
+$bkg-secondary: $clr-two;
+$hilight: $clr-three;
 $hilight-dark: $black;
-$text-light: #cdc8c8;
+$text-light: $clr-four;
 $text-dark: $black;
 $text-mute: #7d7878;
-$text-link: #8d8888;
-$border-light: #586e75;
-$border-dark: $dark-grey;
+$text-link: $blue;
+$border-light: $clr-four;
+$border-dark: $clr-one;
 
 $print-bkg: #ffffff;
 $print-text: #000000;
